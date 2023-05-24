@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="col-4">
+    <h2> <%= @flat.name %></h2>
+    <p> <%= @flat.address %> </p>
+    <p> <%= @flat.description%> </p>
+    <p> <i class="fa-solid fa-money-bill-1-wave"></i> <%= @flat.price_per_night %> GBP/night <i class="fa-solid fa-person-walking-luggage"></i> <%= @flat.number_of_guests %> </p>
+    <p> <%= link_to 'Update',  edit_flat_path(@flat) %> | <%= link_to 'Delete',  flat_path(@flat), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  </div>
+  <%= link_to '< Back', flats_path %>
+</div>
